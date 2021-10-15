@@ -8,10 +8,33 @@ module Types
     #   argument :id, !types.String
     #   resolve -> (root, args, ctx) {User.find(args[:id])}
     # end
-    field :all_users, [UserType], null: false
 
-    def all_users
-      User.all
+    # field :find_user, [UserType], null: false do
+    #   argument :id, !types.String
+    #   resolve -> (root, args, ctx) {User.find(args)}
+    # end
+    #
+    # def find_user(args)
+    #   User.find(args)
+    # end
+    #
+    # field :all_users, [UserType], null: false
+    #
+    # def all_users
+    #   User.all
+    # end
+
+    field :users, [UserType], null: false
+    field :user, UserType, null: true do
+      argument :id, ID, required: true
+    end
+
+    def users
+      ::User.all
+    end
+
+    def user(id:)
+      ::User.find(id)
     end
   end
 end
