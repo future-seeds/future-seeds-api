@@ -7,5 +7,6 @@ module Types
     field :state, String, null: false
     field :intentions, String, null: false
     field :seeds, [SeedType], null: true
+    field :journal_entries, [JournalEntryType], null: true
   end
 end
