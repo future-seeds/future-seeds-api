@@ -10,6 +10,6 @@ module Types
     field :expected_plant_height, String, null: false
     field :notes, String, null: false
     field :user_id, ID, null: false
-    field :user, UserType, null: false
+    # field :user, UserType, null: false
   end
 end
