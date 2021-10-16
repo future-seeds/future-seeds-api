@@ -40,6 +40,11 @@ module Types
       description 'get all journal entries'
     end
 
+    field :journal_entry, JournalEntryType, null: true do
+      description 'get a journal entry by id'
+      argument :id, ID, required: true
+    end
+
     def users
       ::User.all # what is the :: syntax for?
     end
@@ -58,6 +63,10 @@ module Types
 
     def journal_entries
       ::JournalEntry.all
+    end
+
+    def journal_entry(id:)
+      ::JournalEntry.find(id)
     end
   end
 end
