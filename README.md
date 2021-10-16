@@ -21,7 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions!
 
-* ![Schema](https://user-images.githubusercontent.com/81220681/137540494-0e3edd5e-5f5a-436d-8f19-1c30d8a7630d.png)
+* ![Schema](https://user-images.githubusercontent.com/81220681/137567547-07e6e7cf-ce21-469b-9b46-bb8e97359274.png)
 
 
 * ...
