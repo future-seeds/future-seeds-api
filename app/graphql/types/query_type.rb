@@ -19,21 +19,25 @@ module Types
     # end
 
     field :users, [UserType], null: true do
-      description "get all users"
+      description 'get all users'
     end
 
     field :user, UserType, null: true do
-      description "get user by id"
+      description 'get user by id'
       argument :id, ID, required: true
     end
 
     field :seeds, [SeedType], null: true do
-      description "get all seeds"
+      description 'get all seeds'
     end
 
     field :seed, SeedType, null: true do
-      description "get seed by id"
+      description 'get seed by id'
       argument :id, ID, required: true
+    end
+
+    field :journal_entries, [JournalEntryType], null: true do
+      description 'get all journal entries'
     end
 
     def users
@@ -50,6 +54,10 @@ module Types
 
     def seed(id:)
       ::Seed.find(id)
+    end
+
+    def journal_entries
+      ::JournalEntry.all
     end
   end
 end
