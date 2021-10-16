@@ -16,7 +16,6 @@ RSpec.describe Seed, type: :model do
     it { should validate_length_of(:time_to_harvest).is_at_least(1).is_at_most(20) }
     it { should validate_presence_of(:date_planted) }
     it { should validate_length_of(:date_planted).is_at_least(1).is_at_most(20) }
-    it { should validate_presence_of(:sun_exposure) }
     it { should define_enum_for(:sun_exposure).with_values(['Full sun', 'Part shade', 'Full shade', 'Unknown']) }
     it { should validate_presence_of(:expected_plant_height) }
     it { should validate_length_of(:expected_plant_height).is_at_least(1).is_at_most(20) }

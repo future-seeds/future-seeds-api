@@ -6,7 +6,6 @@ class Seed < ApplicationRecord
   validates :days_to_germinate, presence: true, length: { in: 1..20 }
   validates :time_to_harvest, presence: true, length: { in: 1..20 }
   validates :date_planted, presence: true, length: { in: 1..20 }
-  validates :sun_exposure, presence: true
   enum sun_exposure: { 'Full sun' => 0,
                        'Part shade' => 1,
                        'Full shade' => 2,
