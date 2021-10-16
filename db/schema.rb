@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_10_16_223342) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.integer "sun_exposure"
+    t.integer "sun_exposure", default: 3
     t.index ["user_id"], name: "index_seeds_on_user_id"
   end
 
