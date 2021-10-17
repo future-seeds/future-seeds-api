@@ -11,5 +11,5 @@ class Seed < ApplicationRecord
                        'Full shade' => 2,
                        'Unknown' => 3 }
   validates :expected_plant_height, presence: true, length: { in: 1..20 }
-  validates :notes, presence: true, length: { in: 1..140 }
+  validates :notes, presence: true, length: { in: 1..200 }
 end

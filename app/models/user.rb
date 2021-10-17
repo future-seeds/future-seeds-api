@@ -6,5 +6,5 @@ class User < ApplicationRecord
   validates :last_name, presence: true, length: { in: 1..50 }
   validates :city, presence: true, length: { in: 1..50 }
   validates :state, presence: true, length: { is: 2 }
-  validates :intentions, presence: true, length: { in: 1..50 }
+  validates :intentions, presence: true, length: { in: 1..100 }
 end
