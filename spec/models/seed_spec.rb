@@ -20,6 +20,6 @@ RSpec.describe Seed, type: :model do
     it { should validate_presence_of(:expected_plant_height) }
     it { should validate_length_of(:expected_plant_height).is_at_least(1).is_at_most(20) }
     it { should validate_presence_of(:notes) }
-    it { should validate_length_of(:notes).is_at_least(1).is_at_most(140) }
+    it { should validate_length_of(:notes).is_at_least(1).is_at_most(200) }
   end
 end
