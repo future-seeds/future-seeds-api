@@ -36,10 +36,12 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 group :development do
-  gem "graphiql-rails", '1.7.0'
+  gem 'graphiql-rails', '1.7.0'
+  gem 'graphql-batch'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

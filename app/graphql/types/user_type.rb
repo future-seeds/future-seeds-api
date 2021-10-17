@@ -6,5 +6,10 @@ module Types
     field :city, String, null: false
     field :state, String, null: false
     field :intentions, String, null: false
+
+    field :seeds, [SeedType], null: true
+
+    field :journal_entries, [JournalEntryType], null: true
+    field :journal_entry, JournalEntryType, null: true
   end
 end
