@@ -9,7 +9,7 @@ The Ruby on Rails backend application that connects with a React frontend applic
 ### Ruby 2.7.2
 - Check your Ruby version `ruby -v`
 - If your version is NOT Ruby 2.7.2, you can install Ruby 2.7.2 with `rbenv install 2.7.2`
-- To set the Ruby version for a directory and all subdirectories within it, `cd <repo name>` then run `rbenv local 2.7.2`
+- To set the Ruby version for a specific directory and all subdirectories within it, `cd <repo name>` then run `rbenv local 2.7.2`
 - Double check that your Ruby version is correct after changing it with `ruby -v`
 
 ### Rails 5.2.6
