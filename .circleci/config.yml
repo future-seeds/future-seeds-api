@@ -40,7 +40,14 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
+  heroku_deploy:
     jobs:
       - build
+      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+        requires:
+          - build
+        filters:
+          branches:
+            only: main
+        post-steps:
+          - run: heroku run rails db:migrate --app future-seeds-api
