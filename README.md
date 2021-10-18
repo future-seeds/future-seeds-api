@@ -39,7 +39,7 @@ rails s
 
 * Deployment instructions!
 
-* ![Schema](https://user-images.githubusercontent.com/81220681/137611026-7e72af81-5c61-4bf6-9c84-82316aed8da1.png)
+* ![Schema](https://user-images.githubusercontent.com/81220681/137772745-b50850b6-801d-46d5-9f7a-2471151e5672.png)
 
 
 * ...
