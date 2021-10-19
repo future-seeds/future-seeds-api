@@ -11,14 +11,14 @@ JournalEntry.destroy_all
 Seed.destroy_all
 User.destroy_all
 
-#Users
+# Users
 user1 = create(:user)
 user2 = create(:user)
 user3 = create(:user)
 user4 = create(:user)
 user5 = create(:user)
 
-#seeds
+# seeds
 seed1 = create(:seed, user: user1)
 seed2 = create(:seed, user: user1)
 seed3 = create(:seed, user: user1)
@@ -30,7 +30,7 @@ seed8 = create(:seed, user: user4)
 seed9 = create(:seed, user: user4)
 seed10 = create(:seed, user: user4)
 
-#Journal entries
+# Journal entries
 entry1 = create(:journal_entry, user: user1)
 entry2 = create(:journal_entry, user: user1)
 entry3 = create(:journal_entry, user: user1)
