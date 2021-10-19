@@ -49,5 +49,5 @@ workflows:
         filters:
           branches:
             only: main
-        post-steps:
-          - run: heroku run rails db:migrate --app future-seeds-api
+        # post-steps:
+        #   - run: heroku run rails db:migrate --app future-seeds-api
