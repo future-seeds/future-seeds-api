@@ -8,8 +8,25 @@ RSpec.describe Types::QueryType do
 
       result = FutureSeedsApiSchema.execute(query).as_json
       expect(result["data"]["users"].count).to eq(5)
-      expect(result["data"]["users"].first["first_name"]).to eq("Brett")
-      expect(result["data"]["users"].first["last_name"]).to eq("Tan")
+      expect(result["data"]["users"].first["firstName"]).to eq("Brett")
+      expect(result["data"]["users"].first["lastName"]).to eq("Tan")
+      expect(result["data"]["users"].first["city"]).to eq("San Diego")
+      expect(result["data"]["users"].first["state"]).to eq("CA")
+      expect(result["data"]["users"].first["intentions"]).to eq("To control the food supply")
     end
+  end
+
+  def query
+    <<~GQL
+    {
+      users{
+        firstName
+        lastName
+        city
+        state
+        intentions
+      }
+    }
+    GQL
   end
 end
