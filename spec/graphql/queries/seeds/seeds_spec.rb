@@ -3,6 +3,9 @@ require 'rails_helper'
 RSpec.describe Types::QueryType do
   describe 'display seeds' do
     it 'can query all seeds' do
+      JournalEntry.destroy_all
+      Seed.destroy_all
+      User.destroy_all
       user1 = create(:user, first_name: "Brett", last_name: "Tan", city: "San Diego", state: "CA", intentions: "To control the food supply")
       seed1 = create(:seed, name: "Eggplant", planting_depth: "1-2 in", days_to_germinate: "5-7 days", time_to_harvest: "45-60 days", date_planted: "2021-11-23", expected_plant_height: "45-60 in", notes: "purple", sun_exposure: "Full sun", user: user1)
       create_list(:seed, 4)
