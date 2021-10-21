@@ -22,4 +22,14 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:intentions) }
     it { should validate_length_of(:intentions).is_at_least(1).is_at_most(100) }
   end
+
+  describe 'factory bot creation' do
+    before(:all) do
+      @user1 = create(:user)
+    end
+
+    it 'is valid with attributes' do
+      expect(@user1).to be_valid
+    end
+  end
 end
