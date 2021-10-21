@@ -22,4 +22,15 @@ RSpec.describe Seed, type: :model do
     it { should validate_presence_of(:notes) }
     it { should validate_length_of(:notes).is_at_least(1).is_at_most(200) }
   end
+
+  describe 'factory bot creation' do
+    before(:all) do
+      @user1 = create(:user)
+      @seed1 = create(:seed, user: @user1)
+    end
+
+    it 'is valid with attributes' do
+      expect(@seed1).to be_valid
+    end
+  end
 end
