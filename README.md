@@ -47,6 +47,92 @@ bundle exec rspec
 rails s
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+## Queries
+
+### Get All Users Example Query
+```
+{
+  users {
+    firstName
+    lastName
+    city
+    state
+    intentions
+    seeds {
+      name
+      plantingDepth
+      timeToHarvest
+      datePlanted
+      expectedPlantHeight
+      notes
+      userId
+    }
+    journalEntries {
+      date
+      description
+      userId
+    }
+  }
+}
+```
+
+### Get One User Example Query
+```
+{
+  user(id: 14) {
+    firstName
+    lastName
+    city
+    state
+    intentions
+  }
+}
+```
+
+### Get All Seeds
+```
+    seeds {
+      name
+      plantingDepth
+      timeToHarvest
+      datePlanted
+      expectedPlantHeight
+      notes
+      userId
+    }
+```
+### Get One Seed
+```
+    seed(id: 24) {
+      name
+      plantingDepth
+      timeToHarvest
+      datePlanted
+      expectedPlantHeight
+      notes
+      userId
+    }
+```
+
+### Get All Journal Entries
+```
+    journalEntries {
+      date
+      description
+      userId
+    }
+```
+
+### Get One Journal Entry
+```
+    journalEntry(id: 24) {
+      date
+      description
+      userId
+    }
+```
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Technologies
 <p>
