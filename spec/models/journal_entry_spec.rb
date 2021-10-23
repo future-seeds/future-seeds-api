@@ -15,7 +15,6 @@ RSpec.describe JournalEntry, type: :model do
 
   describe 'factory bot creation' do
     before(:all) do
-      # @user1 = create(:user)
       @journal_entry1 = create(:journal_entry)
     end
 
