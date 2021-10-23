@@ -50,6 +50,7 @@ rails s
 ## Queries
 
 ### Get All Users Example Query
+API Endpoint: https://future-seeds-api.herokuapp.com/
 ```
 {
   users {
