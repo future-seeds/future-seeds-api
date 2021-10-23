@@ -48,9 +48,9 @@ rails s
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 ## Queries
+API Endpoint: https://future-seeds-api.herokuapp.com/
 
 ### Get All Users Example Query
-API Endpoint: https://future-seeds-api.herokuapp.com/
 ```
 {
   users {
