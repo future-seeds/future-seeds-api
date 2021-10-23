@@ -7,8 +7,8 @@ RSpec.describe Types::QueryType do
       Seed.destroy_all
       User.destroy_all
 
-      user1 = create(:user, first_name: 'Brett', last_name: 'Tan', city: 'San Diego', state: 'CA',
-                            intentions: 'To control the food supply')
+      create(:user, first_name: 'Brett', last_name: 'Tan', city: 'San Diego', state: 'CA',
+                    intentions: 'To control the food supply')
       create_list(:user, 4)
 
       result = FutureSeedsApiSchema.execute(all_users_query).as_json
@@ -37,11 +37,11 @@ RSpec.describe Types::QueryType do
 
   describe 'display a user' do
     it 'can query one user' do
-      user1 = create(:user, id: 1, first_name: 'Brett', last_name: 'Tan', city: 'San Diego', state: 'CA',
-                            intentions: 'To control the food supply')
+      create(:user, id: 1, first_name: 'Brett', last_name: 'Tan', city: 'San Diego', state: 'CA',
+                    intentions: 'To control the food supply')
       create_list(:user, 1)
 
-      result = FutureSeedsApiSchema.execute(get_user_query).as_json
+      result = FutureSeedsApiSchema.execute(user_query).as_json
       expect(result['data']['user'].count).to eq(5)
       expect(result['data']['user']['firstName']).to eq('Brett')
       expect(result['data']['user']['lastName']).to eq('Tan')
@@ -50,7 +50,7 @@ RSpec.describe Types::QueryType do
       expect(result['data']['user']['intentions']).to eq('To control the food supply')
     end
 
-    def get_user_query
+    def user_query
       <<~GQL
         {
           user(id: "1"){
