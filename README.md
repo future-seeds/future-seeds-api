@@ -91,45 +91,45 @@ rails s
 
 ### Get All Seeds
 ```
-    seeds {
-      name
-      plantingDepth
-      timeToHarvest
-      datePlanted
-      expectedPlantHeight
-      notes
-      userId
-    }
+seeds {
+  name
+  plantingDepth
+  timeToHarvest
+  datePlanted
+  expectedPlantHeight
+  notes
+  userId
+}
 ```
 ### Get One Seed
 ```
-    seed(id: 24) {
-      name
-      plantingDepth
-      timeToHarvest
-      datePlanted
-      expectedPlantHeight
-      notes
-      userId
-    }
+seed(id: 24) {
+  name
+  plantingDepth
+  timeToHarvest
+  datePlanted
+  expectedPlantHeight
+  notes
+  userId
+}
 ```
 
 ### Get All Journal Entries
 ```
-    journalEntries {
-      date
-      description
-      userId
-    }
+journalEntries {
+  date
+  description
+  userId
+}
 ```
 
 ### Get One Journal Entry
 ```
-    journalEntry(id: 24) {
-      date
-      description
-      userId
-    }
+journalEntry(id: 24) {
+  date
+  description
+  userId
+}
 ```
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
