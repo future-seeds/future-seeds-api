@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :seed do
+    user
     name { Faker::Food.vegetables }
     planting_depth { "1/#{Faker::Number.within(range: 2..8)} in" }
     days_to_germinate { "#{Faker::Number.within(range: 1..10)}-#{Faker::Number.within(range: 11..20)} days" }
