@@ -25,8 +25,7 @@ RSpec.describe Seed, type: :model do
 
   describe 'factory bot creation' do
     before(:all) do
-      @user1 = create(:user)
-      @seed1 = create(:seed, user: @user1)
+      @seed1 = create(:seed)
     end
 
     it 'is valid with attributes' do

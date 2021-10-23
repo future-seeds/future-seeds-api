@@ -6,7 +6,7 @@ RSpec.describe Types::QueryType do
       JournalEntry.destroy_all
       Seed.destroy_all
       User.destroy_all
-      
+
       user1 = create(:user, first_name: "Brett", last_name: "Tan", city: "San Diego", state: "CA", intentions: "To control the food supply")
       je1 = create(:journal_entry, date: "2021-11-23", description: "The frost eliminated everything", user: user1)
       create_list(:journal_entry, 4)

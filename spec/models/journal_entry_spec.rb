@@ -15,8 +15,8 @@ RSpec.describe JournalEntry, type: :model do
 
   describe 'factory bot creation' do
     before(:all) do
-      @user1 = create(:user)
-      @journal_entry1 = create(:journal_entry, user: @user1)
+      # @user1 = create(:user)
+      @journal_entry1 = create(:journal_entry)
     end
 
     it 'is valid with attributes' do
