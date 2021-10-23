@@ -173,7 +173,7 @@ journalEntry(id: 24) {
 [FE Heroku](https://future-seeds-ui.herokuapp.com/)
 
 ## Visual Database Schema
-![Schema](https://user-images.githubusercontent.com/81220681/137773360-8031d4ac-a1e0-413b-9e91-dbb4803d424e.png)
+![Schema](https://user-images.githubusercontent.com/81220681/138571470-539eac77-ba09-4377-9a08-adc3e60952b3.png)
 
 ## Contributors
 ### Backend contributors
