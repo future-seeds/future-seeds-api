@@ -3,21 +3,6 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # field :user do
-    #   type UserType
-    #   argument :id, !types.String
-    #   resolve -> (root, args, ctx) {User.find(args[:id])}
-    # end
-
-    # field :find_user, [UserType], null: false do
-    #   argument :id, !types.String
-    #   resolve -> (root, args, ctx) {User.find(args)}
-    # end
-    #
-    # def find_user(args)
-    #   User.find(args)
-    # end
-
     field :users, [UserType], null: true do
       description 'get all users'
     end
@@ -46,7 +31,7 @@ module Types
     end
 
     def users
-      ::User.all # what is the :: syntax for?
+      ::User.all
     end
 
     def user(id:)
