@@ -9,7 +9,6 @@ module Mutations
 
       expect(response).to be_successful
       user = User.last
-
       expect(user.first_name).to eq('Brett')
       expect(user.last_name).to eq('Toensing')
       expect(user.city).to eq('Atlanta')
