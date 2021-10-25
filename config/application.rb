@@ -32,4 +32,9 @@ module FutureSeedsApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = false
   end
+
+  config.action_dispatch.default_headers = {
+    'Access-Control-Allow-Origin' => 'https://future-seeds-ui.herokuapp.com',
+    'Access-Control-Request-Method' => %w{GET POST}.join(",")
+  }
 end
