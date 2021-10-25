@@ -10,7 +10,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins 'https://future-seeds-ui.herokuapp', 'localhost:3000'
 
     resource '*',
-      headers: ["Origin", "Content-Type", "Content-MD5", "Content-Disposition", "Access-Control-Allow-Origin"],
+      headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
