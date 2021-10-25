@@ -31,9 +31,9 @@ module FutureSeedsApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = false
-    config.action_dispatch.default_headers = {
-      'Access-Control-Allow-Origin' => 'https://future-seeds-ui.herokuapp.com',
-      'Access-Control-Request-Method' => %w{GET POST}.join(",")
-    }
+    # config.action_dispatch.default_headers = {
+    #   'Access-Control-Allow-Origin' => 'https://future-seeds-ui.herokuapp.com',
+    #   'Access-Control-Request-Method' => %w{GET POST}.join(",")
+    # }
   end
 end
