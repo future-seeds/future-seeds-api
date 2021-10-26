@@ -66,6 +66,7 @@ API Endpoint: https://future-seeds-api.herokuapp.com/
       datePlanted
       expectedPlantHeight
       notes
+      sunExposure
       userId
     }
     journalEntries {
@@ -99,6 +100,7 @@ seeds {
   datePlanted
   expectedPlantHeight
   notes
+  sunExposure
   userId
 }
 ```
