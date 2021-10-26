@@ -20,7 +20,7 @@ RSpec.describe Mutations::CreateJournalEntry, type: :request do
 
     journal_entry = JournalEntry.last
     expect(journal_entry.date).to eq('2021-10-25')
-    expect(journal_entry.description).to eq('We were sitting the tree next to the river. I saw a toad. The toad ate three flies and then winked at me before hopping into the water.')
+    expect(journal_entry.description).to eq('We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water.')
   end
 
   def mutation
@@ -29,7 +29,7 @@ RSpec.describe Mutations::CreateJournalEntry, type: :request do
         createJournalEntry(input: {
             userId: "#{@user1.id}"
             date: "2021-10-25"
-            description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies and then winked at me before hopping into the water."
+            description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water."
           })
               {
               userId
