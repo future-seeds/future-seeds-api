@@ -47,8 +47,11 @@ bundle exec rspec
 rails s
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-## Queries and Mutations
-API Endpoint: https://future-seeds-api.herokuapp.com/
+## Queries
+BE API Endpoint: https://future-seeds-api.herokuapp.com/graphql
+
+### Postman Instructions
+If you would like to use Postman, set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.com/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
 
 ### Get All Users Example Query
 ```
@@ -153,15 +156,19 @@ journalEntry(id: 24) {
 ### Create a User Mutation Example
 ```
 mutation{
-  createJournalEntry(input: {
-      userId: "#{@user1.id}"
-      date: "2021-10-25"
-      description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water."
+  createUser(input: {
+      firstName: "Brett"
+      lastName: "Toensing"
+      city: "Atlanta"
+      state: "GA"
+      intentions: "Not cut trees"
     })
     {
-    userId
-    date
-    description
+    firstName
+    lastName
+    city
+    state
+    intentions
   }
 }
 ```
