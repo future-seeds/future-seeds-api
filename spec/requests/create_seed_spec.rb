@@ -37,6 +37,7 @@ RSpec.describe Mutations::CreateSeed, type: :request do
             name: "Willow Tree"
             plantingDepth: "12-18 in"
             daysToGerminate: "15-20 days"
+            sunExposure: "Full sun"
             timeToHarvest: "N/A"
             datePlanted: "2021-10-25"
             expectedPlantHeight: "33 ft"
