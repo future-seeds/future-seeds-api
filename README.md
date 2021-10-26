@@ -156,13 +156,13 @@ journalEntry(id: 24) {
 ### Create a User Mutation Example
 ```
 mutation{
-  createUser(input: {
+  createUser(
       firstName: "Brett"
       lastName: "Toensing"
       city: "Memphis"
       state: "TN"
       intentions: "Save the bees"
-    })
+    )
     {
     firstName
     lastName
@@ -177,7 +177,7 @@ mutation{
 ** Note: Currently, it can create a seed WITHOUT setting sun exposure. The default value is "Unknown". The ability to set sun exposure is a WORK IN PROGRESS. **
 ```
 mutation{
-  createSeed(input: {
+  createSeed(
       userId: "8"
       name: "Willow Tree"
       plantingDepth: "12-18 in"
@@ -186,7 +186,7 @@ mutation{
       datePlanted: "2021-10-25"
       expectedPlantHeight: "33 ft"
       notes: "I bring the shade at the river's edge."
-    })
+    )
     {
     userId
     name
@@ -203,11 +203,11 @@ mutation{
 ### Create a Journal Entry Mutation Example
 ```
 mutation{
-  createJournalEntry(input: {
+  createJournalEntry(
       userId: "8"
       date: "2021-10-25"
       description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water."
-    })
+    )
     {
     userId
     date
