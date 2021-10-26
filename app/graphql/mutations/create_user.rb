@@ -17,7 +17,7 @@ class Mutations::CreateUser < ::Mutations::BaseMutation
                         state: state,
                         intentions: intentions)
     if user.save
-      { user: user }
+      user
     else
       {
         user: nil,
