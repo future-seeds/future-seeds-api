@@ -34,8 +34,8 @@ Style/ClassAndModuleChildren:
 Style/Documentation:
   Enabled: false
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
+# Style/FrozenStringLiteralComment:
+#   Enabled: false
 
 Style/SymbolArray:
   Exclude:
