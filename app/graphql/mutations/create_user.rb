@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Mutations::CreateUser < ::Mutations::BaseMutation
   argument :id, ID, required: false
   argument :first_name, String, required: false

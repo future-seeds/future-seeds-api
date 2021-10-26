@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Mutations::CreateJournalEntry < ::Mutations::BaseMutation
   argument :id, ID, required: false
   argument :date, String, required: false
