@@ -14,7 +14,7 @@ class Mutations::CreateJournalEntry < ::Mutations::BaseMutation
                                          description: description,
                                          user_id: user_id)
     if journal_entry.save
-      { journal_entry: journal_entry }
+      journal_entry
     else
       {
         journal_entry: nil,
