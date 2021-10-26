@@ -30,7 +30,7 @@ RSpec.describe Mutations::CreateSeed, type: :request do
   def mutation
     <<~GQL
       mutation{
-        createSeed(input: {
+        createSeed(
             userId: "#{@user1.id}"
             name: "Willow Tree"
             plantingDepth: "12-18 in"
@@ -39,17 +39,17 @@ RSpec.describe Mutations::CreateSeed, type: :request do
             datePlanted: "2021-10-25"
             expectedPlantHeight: "33 ft"
             notes: "I bring the shade at the river's edge."
-          })
-              {
-              userId
-              name
-              plantingDepth
-              daysToGerminate
-              timeToHarvest
-              datePlanted
-              expectedPlantHeight
-              notes
-            }
+          )
+        {
+          userId
+          name
+          plantingDepth
+          daysToGerminate
+          timeToHarvest
+          datePlanted
+          expectedPlantHeight
+          notes
+        }
       }
     GQL
   end
