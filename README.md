@@ -174,7 +174,7 @@ mutation{
 ```
 
 ### Create a Seed Mutation Example
-* Note: Currently, it can create a seed WITHOUT setting sun exposure. The default value is "Unknown". The ability to set sun exposure is a WORK IN PROGRESS.*
+** Note: Currently, it can create a seed WITHOUT setting sun exposure. The default value is "Unknown". The ability to set sun exposure is a WORK IN PROGRESS. **
 ```
 mutation{
   createSeed(input: {
