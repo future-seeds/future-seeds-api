@@ -13,17 +13,13 @@ class Mutations::CreateUser < ::Mutations::BaseMutation
   field :errors, [String], null: false
 
   def resolve(first_name:, last_name:, city:, state:, intentions:)
-    user = User.create!(
-      first_name: first_name,
-      last_name: last_name,
-      city: city,
-      state: state,
-      intentions: intentions
-    )
+    user = User.create!(first_name: first_name,
+                        last_name: last_name,
+                        city: city,
+                        state: state,
+                        intentions: intentions)
     if user.save
-      {
-        user: user
-      }
+      { user: user }
     else
       {
         user: nil,
