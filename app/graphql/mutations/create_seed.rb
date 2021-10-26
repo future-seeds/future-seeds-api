@@ -34,7 +34,7 @@ class Mutations::CreateSeed < ::Mutations::BaseMutation
                         notes: notes,
                         user_id: user_id)
     if seed.save
-      { seed: seed }
+      seed
     else
       {
         seed: nil,
