@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Mutations::CreateJournalEntry < ::Mutations::BaseMutation
   argument :id, ID, required: false
   argument :date, String, required: false
@@ -13,11 +15,8 @@ class Mutations::CreateJournalEntry < ::Mutations::BaseMutation
     journal_entry = JournalEntry.create!(date: date,
                                          description: description,
                                          user_id: user_id)
-
     if journal_entry.save
-      {
-        journal_entry: journal_entry
-      }
+      { journal_entry: journal_entry }
     else
       {
         journal_entry: nil,

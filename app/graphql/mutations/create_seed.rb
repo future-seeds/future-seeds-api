@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Mutations::CreateSeed < ::Mutations::BaseMutation
   argument :id, ID, required: false
   argument :name, String, required: false
@@ -16,7 +18,14 @@ class Mutations::CreateSeed < ::Mutations::BaseMutation
   # field :sun_exposure, Types::SunExposure, null: false
   field :errors, [String], null: false
 
-  def resolve(name:, planting_depth:, days_to_germinate:, time_to_harvest:, date_planted:, expected_plant_height:, notes:, user_id:)
+  def resolve(name:,
+              planting_depth:,
+              days_to_germinate:,
+              time_to_harvest:,
+              date_planted:,
+              expected_plant_height:,
+              notes:,
+              user_id:)
     seed = Seed.create!(name: name,
                         planting_depth: planting_depth,
                         days_to_germinate: days_to_germinate,
@@ -26,11 +35,8 @@ class Mutations::CreateSeed < ::Mutations::BaseMutation
                         expected_plant_height: expected_plant_height,
                         notes: notes,
                         user_id: user_id)
-
     if seed.save
-      {
-        seed: seed
-      }
+      { seed: seed }
     else
       {
         seed: nil,

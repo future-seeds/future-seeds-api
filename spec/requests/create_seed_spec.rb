@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Mutations::CreateSeed, type: :request do
@@ -6,14 +8,13 @@ RSpec.describe Mutations::CreateSeed, type: :request do
     JournalEntry.destroy_all
     User.destroy_all
 
-    @user1 = User.create!(first_name: "Brett",
-                          last_name: "Toensing",
-                          city: "Atlanta",
-                          state: "GA",
-                          intentions: "Not cut trees"
-                         )
+    @user1 = User.create!(first_name: 'Brett',
+                          last_name: 'Toensing',
+                          city: 'Atlanta',
+                          state: 'GA',
+                          intentions: 'Not cut trees')
 
-    post '/graphql', params: {query: mutation}
+    post '/graphql', params: { query: mutation }
 
     expect(response).to be_successful
 
