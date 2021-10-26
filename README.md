@@ -169,6 +169,7 @@ mutation{
     city
     state
     intentions
+    id
   }
 }
 ```
@@ -196,6 +197,7 @@ mutation{
     datePlanted
     expectedPlantHeight
     notes
+    id
   }
 }
 ```
@@ -212,6 +214,7 @@ mutation{
     userId
     date
     description
+    id
   }
 }
 
