@@ -25,13 +25,16 @@ Metrics/ParameterLists:
 
 Style/BlockComments:
   Exclude:
-    - spec/spec_helper.rb
+    - 'spec/spec_helper.rb'
 
 Style/ClassAndModuleChildren:
   Exclude:
     - 'app/graphql/**/*'
 
 Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
   Enabled: false
 
 Style/SymbolArray:
