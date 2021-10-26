@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Mutations::CreateSeed < ::Mutations::BaseMutation
   argument :id, ID, required: false
   argument :name, String, required: false
