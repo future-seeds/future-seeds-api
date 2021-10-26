@@ -1,0 +1,39 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+  NewCops: enable
+  TargetRubyVersion: 2.7
+
+Layout/LineLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'app/controllers/graphql_controller.rb'
+    - 'app/graphql/**/*'
+
+Metrics/ParameterLists:
+  Exclude:
+    - 'app/graphql/mutations/create_seed.rb'
+
+Style/BlockComments:
+  Exclude:
+    - spec/spec_helper.rb
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'app/graphql/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/SymbolArray:
+  Exclude:
+    - 'Gemfile'
