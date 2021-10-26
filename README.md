@@ -87,6 +87,21 @@ API Endpoint: https://future-seeds-api.herokuapp.com/
     city
     state
     intentions
+    seeds {
+      name
+      plantingDepth
+      timeToHarvest
+      datePlanted
+      expectedPlantHeight
+      notes
+      sunExposure
+      userId
+    }
+    journalEntries {
+      date
+      description
+      userId
+    }
   }
 }
 ```
