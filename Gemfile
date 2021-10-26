@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -31,9 +29,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'factory_bot_rails'
 gem 'faker'
 gem 'rack-cors'
-
 gem 'graphql', '1.9.17'
-
 gem 'rubocop', '~> 1.22', require: false
 
 group :development, :test do
