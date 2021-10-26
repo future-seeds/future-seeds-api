@@ -24,16 +24,16 @@ RSpec.describe Mutations::CreateJournalEntry, type: :request do
   def mutation
     <<~GQL
       mutation{
-        createJournalEntry(input: {
+        createJournalEntry(
             userId: "#{@user1.id}"
             date: "2021-10-25"
             description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water."
-          })
-              {
-              userId
-              date
-              description
-            }
+          )
+        {
+          userId
+          date
+          description
+        }
       }
     GQL
   end

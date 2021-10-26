@@ -21,20 +21,20 @@ RSpec.describe Mutations::CreateUser, type: :request do
   def mutation
     <<~GQL
       mutation{
-        createUser(input: {
+        createUser(
             firstName: "Brett"
             lastName: "Toensing"
             city: "Atlanta"
             state: "GA"
             intentions: "Not cut trees"
-          })
-              {
-              firstName
-              lastName
-              city
-              state
-              intentions
-            }
+          )
+        {
+          firstName
+          lastName
+          city
+          state
+          intentions
+        }
       }
     GQL
   end
