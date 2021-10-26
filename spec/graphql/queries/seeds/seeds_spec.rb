@@ -34,7 +34,7 @@ RSpec.describe Types::QueryType do
       expect(result['data']['seeds'].first['expectedPlantHeight']).to eq(seed1.expected_plant_height)
       expect(result['data']['seeds'].first['notes']).to eq(seed1.notes)
       expect(result['data']['seeds'].first['userId']).to eq(user1.id.to_s)
-      expect(result['data']['seeds'].first['sunExposure']).to eq('FULLSUN')
+      expect(result['data']['seeds'].first['sunExposure']).to eq('Full sun')
     end
 
     def all_seeds_query
@@ -77,7 +77,7 @@ RSpec.describe Types::QueryType do
       expect(result['data']['seed']['expectedPlantHeight']).to eq(seed1.expected_plant_height)
       expect(result['data']['seed']['notes']).to eq(seed1.notes)
       expect(result['data']['seed']['userId']).to eq(user1.id.to_s)
-      expect(result['data']['seed']['sunExposure']).to eq('FULLSUN')
+      expect(result['data']['seed']['sunExposure']).to eq('Full sun')
     end
 
     def seed_query
