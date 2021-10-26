@@ -159,9 +159,9 @@ mutation{
   createUser(input: {
       firstName: "Brett"
       lastName: "Toensing"
-      city: "Atlanta"
-      state: "GA"
-      intentions: "Not cut trees"
+      city: "Memphis"
+      state: "TN"
+      intentions: "Save the bees"
     })
     {
     firstName
@@ -178,7 +178,7 @@ mutation{
 ```
 mutation{
   createSeed(input: {
-      userId: "#{@user1.id}"
+      userId: "8"
       name: "Willow Tree"
       plantingDepth: "12-18 in"
       daysToGerminate: "15-20 days"
@@ -204,7 +204,7 @@ mutation{
 ```
 mutation{
   createJournalEntry(input: {
-      userId: "#{@user1.id}"
+      userId: "8"
       date: "2021-10-25"
       description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water."
     })
