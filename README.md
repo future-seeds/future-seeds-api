@@ -47,7 +47,7 @@ bundle exec rspec
 rails s
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-## Queries
+## Queries and Mutations
 API Endpoint: https://future-seeds-api.herokuapp.com/
 
 ### Get All Users Example Query
@@ -78,7 +78,7 @@ API Endpoint: https://future-seeds-api.herokuapp.com/
 }
 ```
 
-### Get One User Example Query
+### Get a User Example Query
 ```
 {
   user(id: 14) {
@@ -119,7 +119,7 @@ seeds {
   userId
 }
 ```
-### Get One Seed
+### Get a Seed
 ```
 seed(id: 24) {
   name
@@ -141,13 +141,73 @@ journalEntries {
 }
 ```
 
-### Get One Journal Entry
+### Get a Journal Entry
 ```
 journalEntry(id: 24) {
   date
   description
   userId
 }
+```
+
+### Create a User Mutation Example
+```
+mutation{
+  createJournalEntry(input: {
+      userId: "#{@user1.id}"
+      date: "2021-10-25"
+      description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water."
+    })
+    {
+    userId
+    date
+    description
+  }
+}
+```
+
+### Create a Seed Mutation Example
+* Note: Currently, it can create a seed WITHOUT setting sun exposure. The default value is "Unknown". The ability to set sun exposure is a WORK IN PROGRESS.*
+```
+mutation{
+  createSeed(input: {
+      userId: "#{@user1.id}"
+      name: "Willow Tree"
+      plantingDepth: "12-18 in"
+      daysToGerminate: "15-20 days"
+      timeToHarvest: "N/A"
+      datePlanted: "2021-10-25"
+      expectedPlantHeight: "33 ft"
+      notes: "I bring the shade at the river's edge."
+    })
+    {
+    userId
+    name
+    plantingDepth
+    daysToGerminate
+    timeToHarvest
+    datePlanted
+    expectedPlantHeight
+    notes
+  }
+}
+```
+
+### Create a Journal Entry Mutation Example
+```
+mutation{
+  createJournalEntry(input: {
+      userId: "#{@user1.id}"
+      date: "2021-10-25"
+      description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water."
+    })
+    {
+    userId
+    date
+    description
+  }
+}
+
 ```
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
