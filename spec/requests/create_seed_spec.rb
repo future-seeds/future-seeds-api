@@ -48,7 +48,6 @@ RSpec.describe Mutations::CreateSeed, type: :request do
               daysToGerminate
               timeToHarvest
               datePlanted
-
               expectedPlantHeight
               notes
             }
