@@ -8,15 +8,13 @@ The Ruby on Rails backend application that connects with a React frontend applic
 [Backend Heroku](https://future-seeds-api.herokuapp.com/) | [Frontend Heroku](https://future-seeds-ui.herokuapp.com/) | [Frontend GitHub Repo](https://github.com/future-seeds/future-seeds-ui)
 
 ## Table of Contents
-- [Technologies](#technologies)
+- [Technologies and Design Principles](#technologies-and-design-principles)
 - [Environment Setup](#environment-setup)
-- [Development Principles](development-principles)
 - [Configuration](#configuration)
 - [Visual Database Schema](#visual-database-schema)
 - [Database Creation](#database-creation)
 - [How to Run the Test Suite](#how-to-run-the-test-suite)
 - [How to Run the Server](#how-to-run-the-server)
-<!-- - [Screenshots](#screenshots) -->
 - [Requests](#requests)
   - [Queries](#queries)
     - [Get Users](#get-users)
@@ -31,7 +29,7 @@ The Ruby on Rails backend application that connects with a React frontend applic
     - [Create a Journal Entry](#create-a-journal-entry)
 - [Contributors](#contributors)
 
-## Technologies
+## Technologies and Design Principles
 <p>
   <img src="https://img.shields.io/badge/Atom-66595C.svg?&style=flaste&logo=atom&logoColor=white" />  
   <img src="https://img.shields.io/badge/Git-F05032.svg?&style=flaste&logo=git&logoColor=white" />
@@ -48,7 +46,12 @@ The Ruby on Rails backend application that connects with a React frontend applic
   <img src="https://img.shields.io/badge/simplecov-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />
   <img src="https://img.shields.io/badge/shoulda--matchers-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />
   <img src="https://img.shields.io/badge/faker-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />
-  <img src="https://img.shields.io/badge/factorybot-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />
+  <img src="https://img.shields.io/badge/factorybot-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" /><br>
+  <img src="https://img.shields.io/badge/OOP-b87818.svg?&style=flaste&logo=OOP&logoColor=white" />
+  <img src="https://img.shields.io/badge/TDD-b8b018.svg?&style=flaste&logo=TDD&logoColor=white" />
+  <img src="https://img.shields.io/badge/MVC-33b818.svg?&style=flaste&logo=MVC&logoColor=white" />
+</p>
+
 </p>
 
 ### Environment Setup
@@ -67,14 +70,6 @@ rbenv local 2.7.2
 - Check your Rails version `rails -v`
 - If you get a message saying rails is not installed or you do not have version 5.2.5, run `gem install rails --version 5.2.5`.
 - Double check that your Ruby version is correct after changing it with `rails -v`
-
-## Development Principles
-<p>
-  <img src="https://img.shields.io/badge/OOP-b81818.svg?&style=flaste&logo=OOP&logoColor=white" />
-  <img src="https://img.shields.io/badge/TDD-b87818.svg?&style=flaste&logo=TDD&logoColor=white" />
-  <img src="https://img.shields.io/badge/MVC-b8b018.svg?&style=flaste&logo=MVC&logoColor=white" />
-  <img src="https://img.shields.io/badge/GRAPHQL-33b818.svg?&style=flaste&logo=REST&logoColor=white" />  
-</p>
 
 ## Configuration
 ```
