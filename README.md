@@ -2,6 +2,7 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+## Overview
 The Ruby on Rails backend application that connects with a React frontend application that allows users to store data about themselves as users, their seeds, and their garden journal entries to reflect on their gardening techniques and improve their future garden.
 
 ## Version
@@ -288,3 +289,5 @@ mutation{
 👩‍🌾  **Samantha Brown**
 - Github: [Samantha Brown](https://github.com/Samantha-Brown)
 - LinkedIn: [Samantha Brown](https://www.linkedin.com/in/samantha-brown-software-developer/)
+
+[Back to top](#overview)
