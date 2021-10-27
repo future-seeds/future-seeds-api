@@ -133,6 +133,7 @@ Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.c
   }
 }
 ```
+[Back to top](#overview)
 
 #### Get a User
 ```graphql
@@ -161,6 +162,7 @@ Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.c
   }
 }
 ```
+[Back to top](#overview)
 
 #### Get Seeds
 ```graphql
@@ -175,6 +177,7 @@ seeds {
   userId
 }
 ```
+[Back to top](#overview)
 
 #### Get a Seed
 ```
@@ -188,6 +191,7 @@ seed(id: 24) {
   userId
 }
 ```
+[Back to top](#overview)
 
 #### Get Journal Entries
 ```graphql
@@ -197,6 +201,7 @@ journalEntries {
   userId
 }
 ```
+[Back to top](#overview)
 
 #### Get a Journal Entry
 ```graphql
@@ -206,6 +211,7 @@ journalEntry(id: 24) {
   userId
 }
 ```
+[Back to top](#overview)
 
 ### Mutations
 
@@ -229,6 +235,7 @@ mutation{
   }
 }
 ```
+[Back to top](#overview)
 
 #### Create a Seed
 ```graphql
@@ -258,6 +265,7 @@ mutation{
   }
 }
 ```
+[Back to top](#overview)
 
 #### Create a Journal Entry
 ```graphql
@@ -276,6 +284,7 @@ mutation{
 }
 
 ```
+[Back to top](#overview)
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
