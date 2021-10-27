@@ -5,16 +5,14 @@
 ## Overview
 The Ruby on Rails backend application that connects with a React frontend application that allows users to store data about themselves as users, their seeds, and their garden journal entries to reflect on their gardening techniques and improve their future garden.
 
-<div align="center">
-  [Backend Heroku](https://future-seeds-api.herokuapp.com/)
-  | [Frontend Heroku](https://future-seeds-ui.herokuapp.com/) | [Frontend GitHub Repo](https://github.com/future-seeds/future-seeds-ui)
-</div>
+[Backend Heroku](https://future-seeds-api.herokuapp.com/) | [Frontend Heroku](https://future-seeds-ui.herokuapp.com/) | [Frontend GitHub Repo](https://github.com/future-seeds/future-seeds-ui)
 
 ## Table of Contents
 - [Technologies](#technologies)
 - [Environment Setup](#environment-setup)
 - [Development Principles](development-principles)
 - [Configuration](#configuration)
+- [Visual Database Schema](#visual-database-schema)
 - [Database Creation](#database-creation)
 - [How to Run the Test Suite](#how-to-run-the-test-suite)
 - [How to Run the Server](#how-to-run-the-server)
@@ -31,8 +29,7 @@ The Ruby on Rails backend application that connects with a React frontend applic
     - [Create a User](#create-a-user)
     - [Create a Seed](#create-a-seed)
     - [Create a Journal Entry](#create-a-journal-entry)
-- Deployment
-- 
+- [Contributors](#contributors)
 
 ## Technologies
 <p>
@@ -85,6 +82,9 @@ git clone git@github.com:future-seeds/future-seeds-api.git
 cd <repo name>
 bundle
 ```
+
+## Visual Database Schema
+![Schema](https://user-images.githubusercontent.com/81220681/138571470-539eac77-ba09-4377-9a08-adc3e60952b3.png)
 
 ## Database creation
 ```
@@ -281,9 +281,6 @@ mutation{
 ```
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-## Visual Database Schema
-![Schema](https://user-images.githubusercontent.com/81220681/138571470-539eac77-ba09-4377-9a08-adc3e60952b3.png)
 
 ## Contributors
 ### Backend Contributors
