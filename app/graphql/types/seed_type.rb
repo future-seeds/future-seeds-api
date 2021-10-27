@@ -8,7 +8,7 @@ module Types
     field :days_to_germinate, String, null: false
     field :time_to_harvest, String, null: false
     field :date_planted, String, null: false
-    field :sun_exposure, Types::SunExposure, null: false
+    field :sun_exposure, String, null: false
     field :expected_plant_height, String, null: false
     field :notes, String, null: false
     field :user_id, ID, null: false
