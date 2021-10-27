@@ -7,6 +7,7 @@ The Ruby on Rails backend application that connects with a React frontend applic
 [Backend Heroku](https://future-seeds-api.herokuapp.com/) | [Frontend Heroku](https://future-seeds-ui.herokuapp.com/) | [Frontend GitHub Repo](https://github.com/future-seeds/future-seeds-ui)
 
 ## Table of Contents
+- [Illustrations](illustrations)
 - [Technologies and Design Principles](#technologies-and-design-principles)
 - [Environment Setup](#environment-setup)
 - [Configuration](#configuration)
