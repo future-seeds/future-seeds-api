@@ -7,12 +7,14 @@ The Ruby on Rails backend application that connects with a React frontend applic
 
 ## Table of Contents
 - [Technologies](#technologies)
-- [System Dependencies](#system-dependencies)
+- [Environment Setup](#environment-setup)
+- [Development Principles](development-principles)
 - [Configuration](#configuration)
 - [Database Creation](#database-creation)
 - [How to Run the Test Suite](#how-to-run-the-test-suite)
+- [How to Run the Server](#how-to-run-the-server)
 <!-- - [Screenshots](#screenshots) -->
-- [Endpoints](#endpoints)
+- [Requests](#requests)
   - [Retrieve Weather for a City](#retrieve-weather-for-a-city)
   - [Background Image for a City](#background-image-for-a-city)
   - [Book Search](#book-search)
@@ -77,23 +79,25 @@ bundle
 rails db:{create,migrate,seed}
 ```
 
-## How to run the test suite
+## How to Run the Test Suite
 ```
 bundle exec rspec
 ```
 
-## How to run server
+## How to Run the Server
 ```
 rails s
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-## Queries
+## Requests
 BE API Endpoint: https://future-seeds-api.herokuapp.com/graphql
 
 ### Postman Instructions
 If you would like to use Postman, set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.com/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
 
-### Get All Users Example Query
+### Queries
+
+#### Get Users
 ```
 {
   users {
@@ -121,7 +125,7 @@ If you would like to use Postman, set the HTTP verb to `POST` and the URL to `ht
 }
 ```
 
-### Get a User Example Query
+#### Get a User
 ```
 {
   user(id: 14) {
@@ -149,7 +153,7 @@ If you would like to use Postman, set the HTTP verb to `POST` and the URL to `ht
 }
 ```
 
-### Get All Seeds
+#### Get Seeds
 ```
 seeds {
   name
@@ -162,7 +166,8 @@ seeds {
   userId
 }
 ```
-### Get a Seed
+
+#### Get a Seed
 ```
 seed(id: 24) {
   name
@@ -175,7 +180,7 @@ seed(id: 24) {
 }
 ```
 
-### Get All Journal Entries
+#### Get Journal Entries
 ```
 journalEntries {
   date
@@ -184,7 +189,7 @@ journalEntries {
 }
 ```
 
-### Get a Journal Entry
+#### Get a Journal Entry
 ```
 journalEntry(id: 24) {
   date
@@ -193,7 +198,7 @@ journalEntry(id: 24) {
 }
 ```
 
-### Create a User Mutation Example
+#### Create a User
 ```
 mutation{
   createUser(
@@ -214,7 +219,7 @@ mutation{
 }
 ```
 
-### Create a Seed Mutation Example
+#### Create a Seed
 ** Note: Currently, it can create a seed WITHOUT setting sun exposure. The default value is "Unknown". The ability to set sun exposure is a WORK IN PROGRESS. **
 ```
 mutation{
@@ -244,7 +249,7 @@ mutation{
 }
 ```
 
-### Create a Journal Entry Mutation Example
+#### Create a Journal Entry
 ```
 mutation{
   createJournalEntry(
@@ -264,8 +269,6 @@ mutation{
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-
-
 ## Deployment
 
 [BE Heroku](https://future-seeds-api.herokuapp.com/)</br>
@@ -276,7 +279,7 @@ mutation{
 ![Schema](https://user-images.githubusercontent.com/81220681/138571470-539eac77-ba09-4377-9a08-adc3e60952b3.png)
 
 ## Contributors
-### Backend contributors
+### Backend Contributors
 👩‍🌾  **Caroline Tan**
 - Github: [Caroline Tan](https://github.com/carolinectan)
 - LinkedIn: [Caroline Tan](https://www.linkedin.com/in/carolinectan/)
@@ -285,7 +288,7 @@ mutation{
 - Github: [Brett Jones](https://github.com/Bhjones45)
 - LinkedIn: [Brett Jones](https://www.linkedin.com/in/brett-h-jones/)
 
-### Frontend contributors
+### Frontend Contributors
 🧑‍🌾  **Dave Leach**
 - Github: [Dave Leach](https://github.com/davidleach724)
 - LinkedIn: [Dave Leach](https://www.linkedin.com/in/davidleach724/)
