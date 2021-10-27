@@ -5,6 +5,11 @@
 ## Overview
 The Ruby on Rails backend application that connects with a React frontend application that allows users to store data about themselves as users, their seeds, and their garden journal entries to reflect on their gardening techniques and improve their future garden.
 
+<div align="center">
+  [Backend Heroku](https://future-seeds-api.herokuapp.com/)
+  | [Frontend Heroku](https://future-seeds-ui.herokuapp.com/) | [Frontend GitHub Repo](https://github.com/future-seeds/future-seeds-ui)
+</div>
+
 ## Table of Contents
 - [Technologies](#technologies)
 - [Environment Setup](#environment-setup)
@@ -26,6 +31,8 @@ The Ruby on Rails backend application that connects with a React frontend applic
     - [Create a User](#create-a-user)
     - [Create a Seed](#create-a-seed)
     - [Create a Journal Entry](#create-a-journal-entry)
+- Deployment
+- 
 
 ## Technologies
 <p>
@@ -227,7 +234,6 @@ mutation{
 ```
 
 #### Create a Seed
-** Note: Currently, it can create a seed WITHOUT setting sun exposure. The default value is "Unknown". The ability to set sun exposure is a WORK IN PROGRESS. **
 ```
 mutation{
   createSeed(
@@ -275,12 +281,6 @@ mutation{
 ```
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-## Deployment
-
-[BE Heroku](https://future-seeds-api.herokuapp.com/)</br>
-[FE Heroku](https://future-seeds-ui.herokuapp.com/)</br>
-[FE GitHub repo](https://github.com/future-seeds/future-seeds-ui)
 
 ## Visual Database Schema
 ![Schema](https://user-images.githubusercontent.com/81220681/138571470-539eac77-ba09-4377-9a08-adc3e60952b3.png)
