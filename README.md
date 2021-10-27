@@ -193,7 +193,7 @@ Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.c
 #### Get a User
 ```graphql
 {
-  user(id: 14) {
+  user(id: 1) {
     firstName
     lastName
     city
@@ -273,69 +273,176 @@ Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.c
 
 #### Get Seeds
 ```graphql
-seeds {
-  name
-  plantingDepth
-  timeToHarvest
-  datePlanted
-  expectedPlantHeight
-  notes
-  sunExposure
-  userId
+{
+  seeds {
+    id
+    name
+    plantingDepth
+    timeToHarvest
+    datePlanted
+    expectedPlantHeight
+    daysToGerminate
+    notes
+    sunExposure
+    userId
+    }
 }
 ```
 
-```ruby
-insert example response here
+```json
+{
+    "data": {
+        "seeds": [
+            {
+                "id": "1",
+                "name": "Fresh Chillies",
+                "plantingDepth": "1/8 in",
+                "timeToHarvest": "47-62 days",
+                "datePlanted": "2021-02-06",
+                "expectedPlantHeight": "10-27 in",
+                "daysToGerminate": "3-12 days",
+                "notes": "We could all have been killed - or worse, expelled.",
+                "sunExposure": "Unknown",
+                "userId": "1"
+            },
+            {
+                "id": "2",
+                "name": "Cos lettuce",
+                "plantingDepth": "1/8 in",
+                "timeToHarvest": "30-69 days",
+                "datePlanted": "2021-10-24",
+                "expectedPlantHeight": "8-33 in",
+                "daysToGerminate": "7-14 days",
+                "notes": "It is our choices, Harry, that show what we truly are, far more than our abilities.",
+                "sunExposure": "Full shade",
+                "userId": "1"
+            },
+            {
+                "id": "3",
+                "name": "Green Pepper",
+                "plantingDepth": "1/3 in",
+                "timeToHarvest": "35-61 days",
+                "datePlanted": "2021-12-05",
+                "expectedPlantHeight": "1-33 in",
+                "daysToGerminate": "10-14 days",
+                "notes": "Never trust anything that can think for itself if you can't see where it keeps its brain.",
+                "sunExposure": "Full shade",
+                "userId": "2"
+            },
+            ...
+        ]
+    }
+}
 ```
 [Back to top](#overview)
 
 
 #### Get a Seed
 ```
-seed(id: 24) {
-  name
-  plantingDepth
-  timeToHarvest
-  datePlanted
-  expectedPlantHeight
-  notes
-  userId
+{
+  seed(id: 1) {
+    id
+    name
+    plantingDepth
+    timeToHarvest
+    datePlanted
+    expectedPlantHeight
+    notes
+    userId
+  }
 }
 ```
 
-```ruby
-insert example response here
+```json
+{
+    "data": {
+        "seed": {
+            "id": "1",
+            "name": "Fresh Chillies",
+            "plantingDepth": "1/8 in",
+            "timeToHarvest": "47-62 days",
+            "datePlanted": "2021-02-06",
+            "expectedPlantHeight": "10-27 in",
+            "notes": "We could all have been killed - or worse, expelled.",
+            "userId": "1"
+        }
+    }
+}
 ```
 [Back to top](#overview)
 
 
 #### Get Journal Entries
 ```graphql
-journalEntries {
-  date
-  description
-  userId
+{
+  journalEntries {
+    id
+    date
+    description
+    userId
+    }
 }
 ```
 
-```ruby
-insert example response here
+```json
+{
+    "data": {
+        "journalEntries": [
+            {
+                "id": "1",
+                "date": "2021-08-18",
+                "description": "Do. Or do not. There is no try.",
+                "userId": "1"
+            },
+            {
+                "id": "2",
+                "date": "2021-06-17",
+                "description": "Younglings, younglings gather ’round.",
+                "userId": "1"
+            },
+            {
+                "id": "3",
+                "date": "2021-08-24",
+                "description": "Much to learn you still have my old padawan. ... This is just the beginning!",
+                "userId": "1"
+            },
+            {
+                "id": "4",
+                "date": "2021-11-18",
+                "description": "At an end your rule is, and not short enough it was!",
+                "userId": "2"
+            }
+            ...
+        ]
+    }
+} 
 ```
 [Back to top](#overview)
 
 
 #### Get a Journal Entry
 ```graphql
-journalEntry(id: 24) {
-  date
-  description
-  userId
+{
+  journalEntry(id: 1) {
+    id
+    date
+    description
+    userId
+    }
 }
 ```
 
-```ruby
-insert example response here
+```json
+{
+    "data": {
+        "journalEntry": {
+            "id": "1",
+            "date": "2021-08-18",
+            "description": "Do. Or do not. There is no try.",
+            "userId": "1"
+        }
+    }
+}
 ```
 [Back to top](#overview)
 
@@ -346,8 +453,8 @@ insert example response here
 ```graphql
 mutation{
   createUser(
-      firstName: "Brett"
-      lastName: "Toensing"
+      firstName: "Jane"
+      lastName: "Johnson"
       city: "Memphis"
       state: "TN"
       intentions: "Save the bees"
@@ -363,8 +470,19 @@ mutation{
 }
 ```
 
-```ruby
-insert example response here
+```json
+{
+    "data": {
+        "createUser": {
+            "firstName": "Jane",
+            "lastName": "Johnson",
+            "city": "Memphis",
+            "state": "TN",
+            "intentions": "Save the bees",
+            "id": "261"
+        }
+    }
+}
 ```
 [Back to top](#overview)
 
@@ -373,7 +491,7 @@ insert example response here
 ```graphql
 mutation{
   createSeed(
-      userId: "8"
+      userId: "261"
       name: "Willow Tree"
       plantingDepth: "12-18 in"
       daysToGerminate: "15-20 days"
@@ -398,8 +516,23 @@ mutation{
 }
 ```
 
-```ruby
-insert example response here
+```json
+{
+    "data": {
+        "createSeed": {
+            "userId": "261",
+            "name": "Willow Tree",
+            "plantingDepth": "12-18 in",
+            "daysToGerminate": "15-20 days",
+            "sunExposure": "Full sun",
+            "timeToHarvest": "N/A",
+            "datePlanted": "2021-10-25",
+            "expectedPlantHeight": "33 ft",
+            "notes": "I bring the shade at the river's edge.",
+            "id": "211"
+        }
+    }
+}
 ```
 [Back to top](#overview)
 
@@ -408,7 +541,7 @@ insert example response here
 ```graphql
 mutation{
   createJournalEntry(
-      userId: "8"
+      userId: "261"
       date: "2021-10-25"
       description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water."
     )
@@ -419,11 +552,19 @@ mutation{
     id
   }
 }
-
 ```
 
-```ruby
-insert example response here
+```json
+{
+    "data": {
+        "createJournalEntry": {
+            "userId": "261",
+            "date": "2021-10-25",
+            "description": "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water.",
+            "id": "27"
+        }
+    }
+}
 ```
 [Back to top](#overview)
 
