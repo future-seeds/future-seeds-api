@@ -260,7 +260,8 @@ mutation{
 ## Deployment
 
 [BE Heroku](https://future-seeds-api.herokuapp.com/)</br>
-[FE Heroku](https://future-seeds-ui.herokuapp.com/)
+[FE Heroku](https://future-seeds-ui.herokuapp.com/)</br>
+[FE GitHub repo](https://github.com/future-seeds/future-seeds-ui)
 
 ## Visual Database Schema
 ![Schema](https://user-images.githubusercontent.com/81220681/138571470-539eac77-ba09-4377-9a08-adc3e60952b3.png)
