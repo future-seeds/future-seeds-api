@@ -15,12 +15,17 @@ The Ruby on Rails backend application that connects with a React frontend applic
 - [How to Run the Server](#how-to-run-the-server)
 <!-- - [Screenshots](#screenshots) -->
 - [Requests](#requests)
-  - [Retrieve Weather for a City](#retrieve-weather-for-a-city)
-  - [Background Image for a City](#background-image-for-a-city)
-  - [Book Search](#book-search)
-  - [User Registration](#user-registration)
-  - [Login](#login)
-  - [Road Trip](#road-trip)
+  - [Queries](#queries)
+    - [Get Users](#get-users)
+    - [Get a User](#get-a-user)
+    - [Get Seeds](#get-seeds)
+    - [Get a Seed](#get-a-seed)
+    - [Get Journal Entries](#get-journal-entries)
+    - [Get a Journal Entry](#get-a-journal-entry)
+  - [Mutations](#mutations)
+    - [Create a User](#create-a-user)
+    - [Create a Seed](#create-a-seed)
+    - [Create a Journal Entry](#create-a-journal-entry)
 
 ## Technologies
 <p>
@@ -197,6 +202,8 @@ journalEntry(id: 24) {
   userId
 }
 ```
+
+### Mutations
 
 #### Create a User
 ```
