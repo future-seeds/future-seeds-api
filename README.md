@@ -28,6 +28,8 @@ The Ruby on Rails backend application that connects with a React frontend applic
     - [Create a Seed](#create-a-seed)
     - [Create a Journal Entry](#create-a-journal-entry)
 - [Contributors](#contributors)
+  - [Backend Contributors](#backend-contributors)
+  - [Frontend Contributors](#frontend-contributors)
 
 ## Technologies and Design Principles
 <p>
@@ -81,7 +83,7 @@ bundle
 ## Visual Database Schema
 ![Schema](https://user-images.githubusercontent.com/81220681/138571470-539eac77-ba09-4377-9a08-adc3e60952b3.png)
 
-## Database creation
+## Database Creation
 ```
 rails db:{create,migrate,seed}
 ```
@@ -97,15 +99,15 @@ rails s
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 ## Requests
-BE API Endpoint: https://future-seeds-api.herokuapp.com/graphql
+Backend API Endpoint: https://future-seeds-api.herokuapp.com/graphql
 
 ### Postman Instructions
-If you would like to use Postman, set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.com/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
+Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.com/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
 
 ### Queries
 
 #### Get Users
-```
+```graphql
 {
   users {
     firstName
@@ -133,7 +135,7 @@ If you would like to use Postman, set the HTTP verb to `POST` and the URL to `ht
 ```
 
 #### Get a User
-```
+```graphql
 {
   user(id: 14) {
     firstName
@@ -161,7 +163,7 @@ If you would like to use Postman, set the HTTP verb to `POST` and the URL to `ht
 ```
 
 #### Get Seeds
-```
+```graphql
 seeds {
   name
   plantingDepth
@@ -188,7 +190,7 @@ seed(id: 24) {
 ```
 
 #### Get Journal Entries
-```
+```graphql
 journalEntries {
   date
   description
@@ -197,7 +199,7 @@ journalEntries {
 ```
 
 #### Get a Journal Entry
-```
+```graphql
 journalEntry(id: 24) {
   date
   description
@@ -208,7 +210,7 @@ journalEntry(id: 24) {
 ### Mutations
 
 #### Create a User
-```
+```graphql
 mutation{
   createUser(
       firstName: "Brett"
@@ -229,7 +231,7 @@ mutation{
 ```
 
 #### Create a Seed
-```
+```graphql
 mutation{
   createSeed(
       userId: "8"
@@ -258,7 +260,7 @@ mutation{
 ```
 
 #### Create a Journal Entry
-```
+```graphql
 mutation{
   createJournalEntry(
       userId: "8"
