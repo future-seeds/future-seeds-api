@@ -121,6 +121,7 @@ Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.c
       timeToHarvest
       datePlanted
       expectedPlantHeight
+      daysToGerminate
       notes
       sunExposure
       userId
@@ -134,8 +135,57 @@ Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.c
 }
 ```
 
-```ruby
-insert example response here
+```json
+{
+    "data": {
+        "users": [
+            {
+                "firstName": "Jacqualine",
+                "lastName": "Torp",
+                "city": "Sawaynview",
+                "state": "WV",
+                "intentions": "ruff",
+                "seeds": [
+                    {
+                        "name": "Fresh Chillies",
+                        "plantingDepth": "1/8 in",
+                        "timeToHarvest": "47-62 days",
+                        "datePlanted": "2021-02-06",
+                        "expectedPlantHeight": "10-27 in",
+                        "daysToGerminate": "3-12 days",
+                        "notes": "We could all have been killed - or worse, expelled.",
+                        "sunExposure": "Unknown",
+                        "userId": "1"
+                    },
+                    {
+                        "name": "Cos lettuce",
+                        "plantingDepth": "1/8 in",
+                        "timeToHarvest": "30-69 days",
+                        "datePlanted": "2021-10-24",
+                        "expectedPlantHeight": "8-33 in",
+                        "daysToGerminate": "7-14 days",
+                        "notes": "It is our choices, Harry, that show what we truly are, far more than our abilities.",
+                        "sunExposure": "Full shade",
+                        "userId": "1"
+                    }
+                ],
+                "journalEntries": [
+                    {
+                        "date": "2021-08-18",
+                        "description": "Do. Or do not. There is no try.",
+                        "userId": "1"
+                    },
+                    {
+                        "date": "2021-06-17",
+                        "description": "Younglings, younglings gather ’round.",
+                        "userId": "1"
+                    }
+                ]
+            },
+            ...
+        ]
+    }
+}
 ```
 [Back to top](#overview)
 
@@ -155,6 +205,7 @@ insert example response here
       timeToHarvest
       datePlanted
       expectedPlantHeight
+      daysToGerminate
       notes
       sunExposure
       userId
@@ -168,8 +219,54 @@ insert example response here
 }
 ```
 
-```ruby
-insert example response here
+```json
+{
+    "data": {
+        "user": {
+            "firstName": "Jacqualine",
+            "lastName": "Torp",
+            "city": "Sawaynview",
+            "state": "WV",
+            "intentions": "ruff",
+            "seeds": [
+                {
+                    "name": "Fresh Chillies",
+                    "plantingDepth": "1/8 in",
+                    "timeToHarvest": "47-62 days",
+                    "datePlanted": "2021-02-06",
+                    "expectedPlantHeight": "10-27 in",
+                    "daysToGerminate": "3-12 days",
+                    "notes": "We could all have been killed - or worse, expelled.",
+                    "sunExposure": "Unknown",
+                    "userId": "1"
+                },
+                {
+                    "name": "Cos lettuce",
+                    "plantingDepth": "1/8 in",
+                    "timeToHarvest": "30-69 days",
+                    "datePlanted": "2021-10-24",
+                    "expectedPlantHeight": "8-33 in",
+                    "daysToGerminate": "7-14 days",
+                    "notes": "It is our choices, Harry, that show what we truly are, far more than our abilities.",
+                    "sunExposure": "Full shade",
+                    "userId": "1"
+                }
+            ],
+            "journalEntries": [
+                {
+                    "date": "2021-08-18",
+                    "description": "Do. Or do not. There is no try.",
+                    "userId": "1"
+                },
+                {
+                    "date": "2021-06-17",
+                    "description": "Younglings, younglings gather ’round.",
+                    "userId": "1"
+                }
+            ]
+        }
+    }
+}
 ```
 [Back to top](#overview)
 
