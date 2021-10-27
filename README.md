@@ -48,6 +48,10 @@ rails s
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 ## Queries
+BE API Endpoint: https://future-seeds-api.herokuapp.com/graphql
+
+### Postman Instructions
+If you would like to use Postman, set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.com/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
 
 ### Get All Users Example Query
 ```
@@ -65,6 +69,7 @@ rails s
       datePlanted
       expectedPlantHeight
       notes
+      sunExposure
       userId
     }
     journalEntries {
@@ -76,7 +81,7 @@ rails s
 }
 ```
 
-### Get One User Example Query
+### Get a User Example Query
 ```
 {
   user(id: 14) {
@@ -85,6 +90,21 @@ rails s
     city
     state
     intentions
+    seeds {
+      name
+      plantingDepth
+      timeToHarvest
+      datePlanted
+      expectedPlantHeight
+      notes
+      sunExposure
+      userId
+    }
+    journalEntries {
+      date
+      description
+      userId
+    }
   }
 }
 ```
@@ -98,10 +118,11 @@ seeds {
   datePlanted
   expectedPlantHeight
   notes
+  sunExposure
   userId
 }
 ```
-### Get One Seed
+### Get a Seed
 ```
 seed(id: 24) {
   name
@@ -123,13 +144,82 @@ journalEntries {
 }
 ```
 
-### Get One Journal Entry
+### Get a Journal Entry
 ```
 journalEntry(id: 24) {
   date
   description
   userId
 }
+```
+
+### Create a User Mutation Example
+```
+mutation{
+  createUser(
+      firstName: "Brett"
+      lastName: "Toensing"
+      city: "Memphis"
+      state: "TN"
+      intentions: "Save the bees"
+    )
+    {
+    firstName
+    lastName
+    city
+    state
+    intentions
+    id
+  }
+}
+```
+
+### Create a Seed Mutation Example
+** Note: Currently, it can create a seed WITHOUT setting sun exposure. The default value is "Unknown". The ability to set sun exposure is a WORK IN PROGRESS. **
+```
+mutation{
+  createSeed(
+      userId: "8"
+      name: "Willow Tree"
+      plantingDepth: "12-18 in"
+      daysToGerminate: "15-20 days"
+      sunExposure: "Full sun"
+      timeToHarvest: "N/A"
+      datePlanted: "2021-10-25"
+      expectedPlantHeight: "33 ft"
+      notes: "I bring the shade at the river's edge."
+    )
+    {
+    userId
+    name
+    plantingDepth
+    daysToGerminate
+    sunExposure
+    timeToHarvest
+    datePlanted
+    expectedPlantHeight
+    notes
+    id
+  }
+}
+```
+
+### Create a Journal Entry Mutation Example
+```
+mutation{
+  createJournalEntry(
+      userId: "8"
+      date: "2021-10-25"
+      description: "We were sitting the tree next to the river. I saw a toad. The toad ate three flies then winked at me before hopping into the water."
+    )
+    {
+    userId
+    date
+    description
+    id
+  }
+}
+
 ```
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
