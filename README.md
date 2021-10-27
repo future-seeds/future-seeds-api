@@ -2,7 +2,6 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## Overview
 The Ruby on Rails backend application that connects with a React frontend application that allows users to store data about themselves as users, their seeds, and their garden journal entries to reflect on their gardening techniques and improve their future garden.
 
 [Backend Heroku](https://future-seeds-api.herokuapp.com/) | [Frontend Heroku](https://future-seeds-ui.herokuapp.com/) | [Frontend GitHub Repo](https://github.com/future-seeds/future-seeds-ui)
