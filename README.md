@@ -31,6 +31,10 @@ The Ruby on Rails backend application that connects with a React frontend applic
   - [Backend Contributors](#backend-contributors)
   - [Frontend Contributors](#frontend-contributors)
 
+## Illustrations
+
+<img src='https://github.com/future-seeds/future-seeds-ui/blob/main/recording%20(6).gif' alt="Future Seeds gif" title="Future Seeds gif" width="500"/>
+
 ## Technologies and Design Principles
 <p>
   <img src="https://img.shields.io/badge/Atom-66595C.svg?&style=flaste&logo=atom&logoColor=white" />  
