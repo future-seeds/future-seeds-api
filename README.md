@@ -133,7 +133,12 @@ Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.c
   }
 }
 ```
+
+```ruby
+insert example response here
+```
 [Back to top](#overview)
+
 
 #### Get a User
 ```graphql
@@ -162,7 +167,12 @@ Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.c
   }
 }
 ```
+
+```ruby
+insert example response here
+```
 [Back to top](#overview)
+
 
 #### Get Seeds
 ```graphql
@@ -177,7 +187,12 @@ seeds {
   userId
 }
 ```
+
+```ruby
+insert example response here
+```
 [Back to top](#overview)
+
 
 #### Get a Seed
 ```
@@ -191,7 +206,12 @@ seed(id: 24) {
   userId
 }
 ```
+
+```ruby
+insert example response here
+```
 [Back to top](#overview)
+
 
 #### Get Journal Entries
 ```graphql
@@ -201,7 +221,12 @@ journalEntries {
   userId
 }
 ```
+
+```ruby
+insert example response here
+```
 [Back to top](#overview)
+
 
 #### Get a Journal Entry
 ```graphql
@@ -211,7 +236,12 @@ journalEntry(id: 24) {
   userId
 }
 ```
+
+```ruby
+insert example response here
+```
 [Back to top](#overview)
+
 
 ### Mutations
 
@@ -235,7 +265,12 @@ mutation{
   }
 }
 ```
+
+```ruby
+insert example response here
+```
 [Back to top](#overview)
+
 
 #### Create a Seed
 ```graphql
@@ -265,7 +300,12 @@ mutation{
   }
 }
 ```
+
+```ruby
+insert example response here
+```
 [Back to top](#overview)
+
 
 #### Create a Journal Entry
 ```graphql
@@ -284,7 +324,12 @@ mutation{
 }
 
 ```
+
+```ruby
+insert example response here
+```
 [Back to top](#overview)
+
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
