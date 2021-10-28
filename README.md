@@ -103,10 +103,13 @@ rails s
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 ## Requests
-Backend API Endpoint: https://future-seeds-api.herokuapp.com/graphql
 
 ### Postman Instructions
-Run the server in your command line with `rails server` or `rails s`. In Postman, set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.com/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
+In Postman, set the HTTP verb to `POST` and the `URL` to the backend API endpoint `https://future-seeds-api.herokuapp.com/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
+
+### Running Locally
+Run the server in your command line with `rails server` or `rails s`. In Postman, set the HTTP verb to `POST` and the `URL` to the backend API endpoint `http://localhost:3000/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
+
 
 ### Queries
 
