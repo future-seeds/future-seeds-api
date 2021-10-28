@@ -106,7 +106,7 @@ rails s
 Backend API Endpoint: https://future-seeds-api.herokuapp.com/graphql
 
 ### Postman Instructions
-Set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.com/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
+Run the server in your command line with `rails server` or `rails s`. In Postman, set the HTTP verb to `POST` and the URL to `https://future-seeds-api.herokuapp.com/graphql`. In the tabs immediately below, select `Body` and `GraphQL`. In the `QUERY` field, enter your query (see examples in following sections). Then, select `SEND`. The response will populate in the lower part of the screen.
 
 ### Queries
 
